@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from aarab44.onrender.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2026 10:43:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AARAV — Sigma</title>
+  <meta name="description" content="AARAV. No excuses. No limits. Pure grind."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com/"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Barlow+Condensed:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- BACKGROUND GLOWS -->
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- MATRIX RAIN CANVAS -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- RED VIGNETTE -->
+  <div class="vignette"></div>
+
+  <!-- NOISE TEXTURE -->
+  <div class="noise"></div>
+
+  <!-- ── MUSIC PLAYER ── -->
+  <div class="music-bar" id="music-bar">
+    <div class="mb-left">
+      <div class="eq-bars" id="eq-bars">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="mb-info">
+        <span class="mb-title" id="mb-title">I Guess</span>
+        <span class="mb-artist" id="mb-artist">KR$NA</span>
+      </div>
+    </div>
+    <div class="mb-controls">
+      <button class="mc" id="prev-btn">⏮</button>
+      <button class="mc mc-play" id="play-btn">▶</button>
+      <button class="mc" id="next-btn">⏭</button>
+      <button class="mc" id="mute-btn">🔊</button>
+    </div>
+    <div class="mb-progress-wrap">
+      <div class="mb-progress" id="mb-progress"></div>
+    </div>
+    <audio id="audio" loop></audio>
+  </div>
+
+  <!-- ── NAV ── -->
+  <nav id="nav">
+    <div class="nav-logo">A<span>A</span>R<span>A</span>V</div>
+    <ul class="nav-links">
+      <li><a href="#hero"     class="nl active">HOME</a></li>
+      <li><a href="#rules"    class="nl">RULES</a></li>
+      <li><a href="#arsenal"  class="nl">ARSENAL</a></li>
+      <li><a href="#projects" class="nl">PROJECTS</a></li>
+      <li><a href="#contact"  class="nl">CONTACT</a></li>
+    </ul>
+    <div class="nav-status"><span class="status-dot"></span>ONLINE</div>
+  </nav>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section id="hero">
+    <div class="hero-bg-text">SIGMA</div>
+
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="tag-line reveal">// NO EXCUSES. NO LIMITS.</div>
+        <h1 class="hero-name reveal">
+          <span>A</span><span>A</span><span class="name-k">R</span><span>A</span><span>V</span>
+        </h1>
+        <p class="hero-role reveal">
+          <span class="role-bracket">[</span>
+          <span id="role-type"></span><span class="role-cursor">_</span>
+          <span class="role-bracket">]</span>
+        </p>
+        <p class="hero-quote reveal">"While others sleep, I build.<br/>While others talk, I execute."</p>
+        <div class="hero-btns reveal">
+          <a href="#projects" class="btn-sigma" id="hero-projects-btn">VIEW WORK ▶</a>
+          <a href="#contact"  class="btn-ghost-sigma" id="hero-contact-btn">CONTACT</a>
+        </div>
+      </div>
+      <div class="hero-right reveal">
+        <!-- DISCORD PROFILE CARD -->
+        <div class="dc-card">
+          <div class="dc-banner">
+            <span class="dc-banner-text">blah, blah, blah .... shut up</span>
+          </div>
+          <div class="dc-avatar-wrap">
+            <img src="pfp.png" alt="AARAV" class="dc-avatar"/>
+            <span class="dc-status-dot"></span>
+          </div>
+          <div class="dc-body">
+            <h3 class="dc-name">𝐀𝐚𝐫𝐚𝐯 🔒</h3>
+            <p class="dc-tag">onlyyyaarav</p>
+            <div class="dc-badges">
+              <span class="dc-badge" title="PC X" style="width: auto; padding: 0 8px; color: #ff85a2; font-weight: bold; font-size: 0.7rem;">💖 PC X</span>
+              <span class="dc-badge" title="Active Developer">🛡️</span>
+              <span class="dc-badge" title="Nitro">💎</span>
+              <span class="dc-badge" title="Server Booster">🚀</span>
+            </div>
+            <div class="dc-divider"></div>
+            <div class="dc-section">
+              <h4>ABOUT ME</h4>
+              <p style="white-space: pre-line; line-height: 1.5; font-size: 0.8rem;"><strong>OWNER OF :- PC X JADUGAR</strong>
+INFO: <a href="https://discord.gg/b9wUWPbhse" target="_blank" style="color: var(--red); text-decoration: none;">discord.gg/b9wUWPbhse</a>
+
+<strong>SKILLS:-</strong> C++ / JAVA / C# / +ANDROID</p>
+            </div>
+            <div class="dc-section">
+              <h4>MEMBER SINCE</h4>
+              <p>🎮 Sep 24, 2023</p>
+            </div>
+            <div class="dc-section">
+              <h4>STATUS</h4>
+              <p class="dc-status-msg">🙏 Always Shiv ji</p>
+            </div>
+            
+            <!-- SPOTIFY SECTION -->
+            <div class="dc-spotify" id="dc-spotify">
+              <div class="dc-divider"></div>
+              <h4>LISTENING TO SPOTIFY</h4>
+              <div class="spotify-info">
+                <div class="art-container">
+                  <img src="#" alt="Album Art" class="spotify-art" id="spotify-art"/>
+                  <span class="spotify-icon-pulse">🎵</span>
+                </div>
+                <div class="spotify-details">
+                  <span class="spotify-song" id="spotify-song">Loading Track...</span>
+                  <span class="spotify-artist" id="spotify-artist">Loading Artist...</span>
+                </div>
+              </div>
+              <div class="spotify-progress-wrap">
+                <div class="spotify-progress" id="spotify-progress"></div>
+              </div>
+            </div>
+            
+            <a href="https://discord.gg/b9wUWPbhse" target="_blank" class="dc-join-btn">JOIN SERVER ▶</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar reveal">
+      <div class="stat-block">
+        <span class="sb-num" data-target="20">0</span><span class="sb-plus">+</span>
+        <p>PROJECTS</p>
+      </div>
+      <div class="sb-sep"></div>
+      <div class="stat-block">
+        <span class="sb-num" data-target="5">0</span><span class="sb-plus">+</span>
+        <p>YEARS</p>
+      </div>
+      <div class="sb-sep"></div>
+      <div class="stat-block">
+        <span class="sb-num" data-target="200">0</span><span class="sb-plus">+</span>
+        <p>CLIENTS</p>
+      </div>
+      <div class="sb-sep"></div>
+      <div class="stat-block">
+        <span class="sb-num" data-target="100">0</span><span class="sb-plus">%</span>
+        <p>COMMITTED</p>
+      </div>
+    </div>
+
+    <div class="scroll-hint reveal">SCROLL DOWN ↓</div>
+  </section>
+
+  <!-- ══════════ RULES ══════════ -->
+  <section id="rules">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-num">01</span>
+        <h2 class="sec-title">THE <span class="red">SIGMA</span><br/>RULES</h2>
+      </div>
+      <div class="rules-grid">
+        <div class="rule-card reveal">
+          <span class="rule-num">I</span>
+          <h3>OPERATE ALONE</h3>
+          <p>The lone wolf doesn't need validation. Build in silence. Let results speak.</p>
+        </div>
+        <div class="rule-card reveal" style="animation-delay:.08s">
+          <span class="rule-num">II</span>
+          <h3>OBSESS OVER CRAFT</h3>
+          <p>Average is unacceptable. Every line of code, every pixel — must be elite.</p>
+        </div>
+        <div class="rule-card reveal" style="animation-delay:.16s">
+          <span class="rule-num">III</span>
+          <h3>NEVER STOP</h3>
+          <p>Comfort is the enemy of growth. Grind when motivated. Grind when you're not.</p>
+        </div>
+        <div class="rule-card reveal" style="animation-delay:.24s">
+          <span class="rule-num">IV</span>
+          <h3>EXECUTE FIRST</h3>
+          <p>Ideas are worthless without execution. Ship it. Refine it. Dominate it.</p>
+        </div>
+        <div class="rule-card reveal" style="animation-delay:.32s">
+          <span class="rule-num">V</span>
+          <h3>NO EXCUSES</h3>
+          <p>Either you want it or you don't. Obstacles are just checkpoints you haven't cleared yet.</p>
+        </div>
+        <div class="rule-card reveal" style="animation-delay:.4s">
+          <span class="rule-num">VI</span>
+          <h3>EVOLVE DAILY</h3>
+          <p>Yesterday's AARAV is the enemy of today's AARAV. Level up. Every. Single. Day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ARSENAL ══════════ -->
+  <section id="arsenal" class="sec-dark">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-num">02</span>
+        <h2 class="sec-title">MY <span class="red">ARSENAL</span></h2>
+      </div>
+      <div class="arsenal-grid">
+
+        <div class="ars-category reveal">
+          <div class="ars-header"><span class="ars-icon">⚔️</span><h3>NATIVE / LOW-LEVEL</h3></div>
+          <div class="ars-items">
+            <div class="ars-item">
+              <div class="ars-top"><span>C++ / NDK</span><span class="ars-pct">92%</span></div>
+              <div class="ars-bar"><div class="ars-fill" data-w="92"></div></div>
+            </div>
+            <div class="ars-item">
+              <div class="ars-top"><span>ARM Assembly</span><span class="ars-pct">80%</span></div>
+              <div class="ars-bar"><div class="ars-fill" data-w="80"></div></div>
+            </div>
+            <div class="ars-item">
+              <div class="ars-top"><span>Reverse Engineering</span><span class="ars-pct">95%</span></div>
+              <div class="ars-bar"><div class="ars-fill" data-w="95"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ars-category reveal" style="animation-delay:.1s">
+          <div class="ars-header"><span class="ars-icon">📱</span><h3>MOBILE</h3></div>
+          <div class="ars-items">
+            <div class="ars-item">
+              <div class="ars-top"><span>Android / Java</span><span class="ars-pct">90%</span></div>
+              <div class="ars-bar"><div class="ars-fill" data-w="90"></div></div>
+            </div>
+            <div class="ars-item">
+              <div class="ars-top"><span>APK Modding</span><span class="ars-pct">98%</span></div>
+              <div class="ars-bar"><div class="ars-fill" data-w="98"></div></div>
+            </div>
+            <div class="ars-item">
+              <div class="ars-top"><span>React Native</span><span class="ars-pct">75%</span></div>
+              <div class="ars-bar"><div class="ars-fill" data-w="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ars-category reveal" style="animation-delay:.2s">
+          <div class="ars-header"><span class="ars-icon">🌐</span><h3>WEB / UI</h3></div>
+          <div class="ars-items">
+            <div class="ars-item">
+              <div class="ars-top"><span>HTML / CSS / JS</span><span class="ars-pct">95%</span></div>
+              <div class="ars-bar"><div class="ars-fill" data-w="95"></div></div>
+            </div>
+            <div class="ars-item">
+              <div class="ars-top"><span>React / Next.js</span><span class="ars-pct">85%</span></div>
+              <div class="ars-bar"><div class="ars-fill" data-w="85"></div></div>
+            </div>
+            <div class="ars-item">
+              <div class="ars-top"><span>C# / WPF</span><span class="ars-pct">82%</span></div>
+              <div class="ars-bar"><div class="ars-fill" data-w="82"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TECH PILLS -->
+      <div class="tech-pills reveal">
+        <span class="pill">C++</span><span class="pill">Android</span>
+        <span class="pill">ARM ASM</span><span class="pill">React</span>
+        <span class="pill">Node.js</span><span class="pill">C#</span>
+        <span class="pill">Python</span><span class="pill">IDA Pro</span>
+        <span class="pill">Frida</span><span class="pill">Ghidra</span>
+        <span class="pill">Git</span><span class="pill">Linux</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PROJECTS ══════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-num">03</span>
+        <h2 class="sec-title">SIGMA <span class="red">WORK</span></h2>
+      </div>
+
+      <div class="projects-list">
+
+        <div class="proj-row reveal" id="proj-rapid">
+          <div class="proj-num">01</div>
+          <div class="proj-body">
+            <div class="proj-top-row">
+              <h3 class="proj-name">PC X JADUGAR</h3>
+              <div class="proj-tags"><span class="ptag">C++</span><span class="ptag">Android</span><span class="ptag">WPF</span></div>
+              <span class="proj-live">● LIVE</span>
+            </div>
+            <p class="proj-desc">Premium game-mod panel with HWID protection, license key auth, and a glass black UI. Built for performance and stealth operations.</p>
+          </div>
+          <a href="#" class="proj-arrow">→</a>
+        </div>
+
+        <div class="proj-row reveal" id="proj-silent">
+          <div class="proj-num">02</div>
+          <div class="proj-body">
+            <div class="proj-top-row">
+              <h3 class="proj-name">SILENT COVER</h3>
+              <div class="proj-tags"><span class="ptag">C++</span><span class="ptag">ARM ASM</span></div>
+              <span class="proj-live">● LIVE</span>
+            </div>
+            <p class="proj-desc">Advanced antiban patch system using ARM assembly hooks. Bypasses CRC checks and monitor threads invisibly. Zero detection rate.</p>
+          </div>
+          <a href="#" class="proj-arrow">→</a>
+        </div>
+
+        <div class="proj-row reveal" id="proj-kanha">
+          <div class="proj-num">03</div>
+          <div class="proj-body">
+            <div class="proj-top-row">
+              <h3 class="proj-name">JADUGAR UID BYPASS</h3>
+              <div class="proj-tags"><span class="ptag">Android</span><span class="ptag">C#</span><span class="ptag">WPF</span></div>
+              <span class="proj-live">● LIVE</span>
+            </div>
+            <p class="proj-desc">UID bypass system for Android with a desktop WPF companion. Handles auth flows, HWID spoofing and real-time updates.</p>
+          </div>
+          <a href="#" class="proj-arrow">→</a>
+        </div>
+
+        <div class="proj-row reveal" id="proj-sky">
+          <div class="proj-num">04</div>
+          <div class="proj-body">
+            <div class="proj-top-row">
+              <h3 class="proj-name">AARAV DASHBOARD</h3>
+              <div class="proj-tags"><span class="ptag">React</span><span class="ptag">Node.js</span></div>
+              <span class="proj-live wip">◉ WIP</span>
+            </div>
+            <p class="proj-desc">Real-time analytics dashboard with live charts, WebSocket data streams, and a full dark UI system. Built to scale.</p>
+          </div>
+          <a href="#" class="proj-arrow">→</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ MINDSET QUOTE ══════════ -->
+  <section id="quote-sec">
+    <div class="quote-wrap reveal">
+      <div class="quote-line"></div>
+      <blockquote class="big-quote">
+        "DISCIPLINE IS THE<br/>BRIDGE BETWEEN<br/><span class="red">GOALS</span> AND<br/><span class="red">RESULTS</span>."
+      </blockquote>
+      <div class="quote-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <section id="contact" class="sec-dark">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="sec-num">04</span>
+        <h2 class="sec-title">LET'S <span class="red">TALK</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <p class="contact-lead">I don't take every project — I take the <span class="red">right ones</span>. If you've got something worth building, I'm listening.</p>
+          <div class="contact-links">
+            <a href="mailto:aarav@example.com" class="clink" id="c-email">
+              <span class="cl-icon">✉</span>
+              <div><strong>EMAIL</strong><small>aarav@example.com</small></div>
+            </a>
+            <a href="https://discord.gg/b9wUWPbhse" target="_blank" class="clink" id="c-discord">
+              <span class="cl-icon">🎮</span>
+              <div><strong>DISCORD</strong><small>discord.gg/b9wUWPbhse</small></div>
+            </a>
+            <a href="https://youtube.com/@pcxjadugar02?si=becwpeCdUvEFEL4w" target="_blank" class="clink" id="c-youtube">
+              <span class="cl-icon">📺</span>
+              <div><strong>YOUTUBE</strong><small>@pcxjadugar02</small></div>
+            </a>
+            <a href="#" class="clink" id="c-telegram">
+              <span class="cl-icon">✈</span>
+              <div><strong>TELEGRAM</strong><small>t.me/onlyyyaarav</small></div>
+            </a>
+          </div>
+        </div>
+        <form class="sigma-form reveal" id="contact-form">
+          <div class="fg">
+            <label>YOUR NAME</label>
+            <input type="text" id="inp-name" placeholder="John Doe"/>
+          </div>
+          <div class="fg">
+            <label>EMAIL</label>
+            <input type="email" id="inp-email" placeholder="john@example.com"/>
+          </div>
+          <div class="fg">
+            <label>MESSAGE</label>
+            <textarea id="inp-msg" rows="4" placeholder="What do you want to build?"></textarea>
+          </div>
+          <button type="submit" class="btn-sigma full" id="send-btn">SEND MESSAGE ▶</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">AARAV.</span>
+      <span class="footer-copy">© 2026 AARAV · onlyyyaarav — Built in the dark. Forged by grind.</span>
+      <span class="footer-mode"><span class="status-dot"></span>SIGMA MODE: ON</span>
+    </div>
+  </footer>
+
+  <!-- SCROLL TOP -->
+  <button class="scroll-top" id="scroll-top-btn">↑</button>
+
+  <script src="app.js"></script>
+</body>
+
+<!-- Mirrored from aarab44.onrender.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Aug 2026 10:43:33 GMT -->
+</html>
