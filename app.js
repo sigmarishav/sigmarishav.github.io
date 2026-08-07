@@ -228,7 +228,7 @@
     'JAVA DEVELOPER',
     'C# DEVELOPER',
     'ANDROID MODDER',
-    'PC X JADUGAR OWNER',
+    'ETHICAL HACKER',
   ];
   let wi = 0, ci = 0, del = false;
 
