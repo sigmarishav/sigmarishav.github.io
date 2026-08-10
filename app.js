@@ -326,71 +326,7 @@
   });
 })();
 
-/* ══════════ MUSIC PLAYER ══════════ */
-(function() {
-  const audio    = document.getElementById('audio');
-  const playBtn  = document.getElementById('play-btn');
-  const prevBtn  = document.getElementById('prev-btn');
-  const nextBtn  = document.getElementById('next-btn');
-  const muteBtn  = document.getElementById('mute-btn');
-  const eqBars   = document.getElementById('eq-bars');
-  const titleEl  = document.getElementById('mb-title');
-  const artistEl = document.getElementById('mb-artist');
-  const prog     = document.getElementById('mb-progress');
 
-  const tracks = [
-    { title: 'I Guess', artist: 'KR$NA', src: 'IGuess.mp3' },
-    { title: 'AURA',  artist: 'AARAV — onlyyyaarav',  src: 'Aura.mp3' },
-  ];
-
-  let idx = 0, playing = false;
-
-  function load(i) {
-    const t = tracks[i];
-    titleEl.textContent  = t.title;
-    artistEl.textContent = t.artist;
-    audio.src = t.src;
-    audio.volume = 0.5;
-    if (playing) audio.play();
-  }
-
-  function setPlayState(state) {
-    playing = state;
-    playBtn.textContent = playing ? '⏸' : '▶';
-    eqBars.classList.toggle('paused', !playing);
-  }
-
-  function toggle() {
-    if (playing) {
-      audio.pause(); setPlayState(false);
-    } else {
-      audio.play().then(() => setPlayState(true)).catch(() => {});
-    }
-  }
-
-  playBtn.addEventListener('click', toggle);
-  prevBtn.addEventListener('click', () => { idx = (idx - 1 + tracks.length) % tracks.length; load(idx); });
-  nextBtn.addEventListener('click', () => { idx = (idx + 1) % tracks.length; load(idx); });
-  muteBtn.addEventListener('click', () => { audio.muted = !audio.muted; muteBtn.textContent = audio.muted ? '🔇' : '🔊'; });
-
-  audio.addEventListener('timeupdate', () => {
-    if (audio.duration) prog.style.width = (audio.currentTime / audio.duration * 100) + '%';
-  });
-  audio.addEventListener('ended', () => { idx = (idx + 1) % tracks.length; load(idx); if (!playing) toggle(); });
-
-  load(0);
-
-  // Auto-play on first interaction
-  let started = false;
-  function tryPlay() {
-    if (started) return; started = true;
-    toggle();
-    document.removeEventListener('click', tryPlay);
-    document.removeEventListener('keydown', tryPlay);
-  }
-  document.addEventListener('click', tryPlay);
-  document.addEventListener('keydown', tryPlay);
-})();
 
 /* ══════════ RED CURSOR ══════════ */
 (function() {
