@@ -426,3 +426,12 @@
     el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; trail.style.transform = 'scale(1)'; });
   });
 })();
+const bgMusic = document.getElementById("bgMusic");
+
+if (bgMusic) {
+    bgMusic.volume = 0.5;
+
+    document.addEventListener("click", () => {
+        bgMusic.play().catch(() => {});
+    }, { once: true });
+}
